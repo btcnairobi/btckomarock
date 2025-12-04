@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Bitcoin Komarock</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bitcoin: {
+                orange: '#F7931A',
+                hover: '#E8860F',
+              },
+              stone: {
+                900: '#1C1C1E', // Ink / Borders
+                100: '#F5F5F4', // Background
+                50: '#FAFAF9',  // Lighter Background
+              }
+            },
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+            },
+            boxShadow: {
+              'rock': '4px 4px 0px 0px #1C1C1E', // Hard shadow for "Rocky" feel
+              'rock-sm': '2px 2px 0px 0px #1C1C1E',
+              'rock-hover': '6px 6px 0px 0px #1C1C1E',
+            }
+          }
+        }
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+      body { 
+        font-family: 'Outfit', sans-serif; 
+        background-color: #FAFAF9; /* stone-50 */
+        color: #1C1C1E; /* stone-900 */
+        -webkit-tap-highlight-color: transparent;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      /* Rocky Outline Card Style */
+      .rock-card {
+        background-color: #FFFFFF;
+        border: 2px solid #1C1C1E;
+        border-radius: 1rem;
+        box-shadow: 4px 4px 0px 0px #1C1C1E;
+        transition: all 0.2s ease-in-out;
+      }
+      .rock-card:active {
+        transform: translate(2px, 2px);
+        box-shadow: 2px 2px 0px 0px #1C1C1E;
+      }
+      .btn-primary {
+        background-color: #F7931A;
+        color: #FFFFFF;
+        border: 2px solid #1C1C1E;
+        box-shadow: 2px 2px 0px 0px #1C1C1E;
+        font-weight: 700;
+      }
+      .btn-primary:active {
+        transform: translate(1px, 1px);
+        box-shadow: 1px 1px 0px 0px #1C1C1E;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react-router-dom": "https://aistudiocdn.com/react-router-dom@^7.10.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-stone-50 min-h-screen selection:bg-bitcoin-orange selection:text-white">
+    <div id="root" class="h-full"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
